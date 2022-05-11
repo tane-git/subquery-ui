@@ -5,7 +5,7 @@ interface IProps extends FormProps {
   children: React.ReactNode;
 }
 
-// export const Form: React.FC<IProps> = (props) => <AntForm {...props} />
+export const Form: React.FC<IProps> = (props) => <AntForm {...props} />
 // export const Form: React.forwardRef<IProps> = (props) => <AntForm {...props} />
 
 // const Form = (props: FormProps) => <AntForm {...props} />;

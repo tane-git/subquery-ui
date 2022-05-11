@@ -1,3 +1,5 @@
 import './src/style.less'
 
-export * from './src/components'
+export * from 'antd'
+// export * from './src/components'
+export { Button } from './src/components'
