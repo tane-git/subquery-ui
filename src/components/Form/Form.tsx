@@ -9,4 +9,13 @@ interface IProps extends FormProps {
 // export const Form: React.forwardRef<IProps> = (props) => <AntForm {...props} />
 
 // const Form = (props: FormProps) => <AntForm {...props} />;
-export const Form = (props: IProps) => <AntForm {...props} />;
+// export const Form = (props: IProps) => <AntForm {...props} />;
+
+// ? trying to copy antd Form.d.ts:
+// export const Form:
+//   <Values = any>(props: FormProps<Values> & { children: React.ReactNode; })
+// // => <AntForm<Values> {...props} /> = (props) => <AntForm {...props} />; 
+// => <AntForm {...props} /> = (props) => <AntForm {...props} />; 
+
+
+// extend antd form:
