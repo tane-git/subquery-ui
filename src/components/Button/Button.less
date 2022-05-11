@@ -1,24 +1,9 @@
-// * styles from previous library:
-// @btn-default-border: @primary-color;
-// @btn-disable-color: @gray-4;
-// @btn-disable-bg: @gray-2;
-// @btn-disable-border: @gray-2;
-
-// * this works:
-// @btn-primary-bg: purple;
-
-// * this works:
-// @primary-blue-1: #4388DD;
-
-// ? trying to import theme.less
-// @import '../theme.less'; // * works!
 @import '../../style/theme.less';
-// ! ^ doesn't work?
-// @import '../../theme.less';
-// ! ^ doesn't work?
-// @import '../themeThing.less';
 
-@btn-primary-bg: orange;
-// @btn-primary-bg: purple;
-@btn-primary-bg: @primary-blue-1;
 @btn-primary-bg: @primary-pink-1;
+@btn-primary-bg: @primary-blue-1;
+
+@btn-default-border: @primary-color;
+@btn-disable-color: @gray-4;
+@btn-disable-bg: @gray-2;
+@btn-disable-border: @gray-2;
