@@ -1,44 +1,35 @@
+// ! NEED HELP WITH THIS FILE
+// I cant figure out how to easily extend the Text component to add our own design system
+
 import { Typography as AntTypograhpy, TypographyProps } from 'antd';
-import { TextProps } from 'antd/lib/typography/Text';
+// import { TextProps } from 'antd/lib/typography/Text';
 import style from './style.module.less';
 
 const { Text } = AntTypograhpy;
 
-// interface SqTextProps extends  TextProps {
-//   sq: SqText
-// }
+// ? WHAT do I want to do ?
+// * Import AntD Typography and then extend the type of the Text component
+// * so that it can take the additional prop of 'sq' which will apply our styles.
 
-// const sqText: React.ForwardRefRenderFunction<HTMLSpanElement, SqTextProps> = (props, ref) => {
-// const sqText = (sq: string) => {
-//   return(
-//     <Text className={style[sq]}/>
-//   )
-// }
-
-// ? how do you create an interface extending the type of something
-// interface sqTextProps extends typeof Text {
-//   sq: String;
-// }
-
-
-
-const sqText: sqTextProps = (props) => {
-  return(
-    <Text className={style[props.sq]}/>
-  )
+type SqText = typeof Text & {
+  sq: SqTextTypes
 }
 
-export type SqTypographyProps = typeof AntTypograhpy & {
-
+const sqText = (sqTextType: SqTextTypes, children: string) => {
+  return <Text className={style[sqTextType]} children={children} />
 }
 
-const Typography = AntTypograhpy 
-Typography.Text = sqText
+type SqTypographyProps = TypographyProps & {
+  SqText: typeof sqText;
+}
+
+const Typography = AntTypograhpy as SqTypographyProps
+Typography.SqText = sqText
 
 export { Typography }
 
 // Subquery Design System:
-type SqText = 'large'
+type SqTextTypes = 'large'
   | 'largeSemiBold'
   | 'body'
   | 'bodyMedium'
