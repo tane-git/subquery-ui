@@ -1,13 +1,13 @@
 import './src/style.less'
 
-// export * from 'antd'
+export * from 'antd'
 // export * from './src/components'
-import { Typography, Form } from 'antd'
+// import { Typography, Form } from 'antd'
 
-export {
-  Typography,
-  Form
-}
+// export {
+//   Typography,
+//   Form
+// }
 
 export {
   Button,
