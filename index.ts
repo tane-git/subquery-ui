@@ -1,16 +1,32 @@
 import './src/style.less'
 
-export * from 'antd'
-// export * from './src/components'
-// import { Typography, Form } from 'antd'
+// * there are a few different ways we can export stuff from the library
 
+// * Just export our modified components
+export * from './src/components'
+
+// * export some components from antd and export them individually
+// import { Typography, Form } from 'antd'
 // export {
 //   Typography,
-//   Form
-// }
+//   Form,
+//   Slider,
+//   Input,
+//   Popover,
+//   Switch,
+//   Row,
+//   Col,
+//   Collapse,
+// } from 'antd'
 
-export {
-  Button,
-  // Typography,
-  Text,
-} from './src/components'
+// * export all from antd, then override exports with modified components (from components)
+// export * from 'antd'
+
+// * override exports with modified components
+// export {
+//   Button,
+//   // Typography,
+//   Text,
+//   Slider,
+//   Popover,
+// } from './src/components'
