@@ -34,3 +34,6 @@ export * from './src/components'
   // Slider,
   // Popover,
 // } from './src/components'
+
+// * and export the modules
+export * from './src/modules'
