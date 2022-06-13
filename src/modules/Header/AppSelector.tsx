@@ -1,43 +1,60 @@
-import { DownOutlined } from '@ant-design/icons';
-import { Dropdown as AntdDropdown, DropDownProps, Menu } from 'antd';
-import { useState } from 'react';
-import './AppSelector.less';
-import { ReactComponent as NewTab } from './img/newTab.svg';
-import styles from './AppSelector.module.less';
+import { DownOutlined, CaretDownOutlined } from "@ant-design/icons";
+import { Dropdown as AntdDropdown, DropDownProps, Menu } from "antd";
+import { useState } from "react";
+import "./AppSelector.less";
+import { ReactComponent as NewTab } from "./img/newTab.svg";
+import { ReactComponent as Apps } from "./img/apps.svg";
+import styles from "./AppSelector.module.less";
 
-// ? This component could be merged with the BuildDropdown component.
+export type MenuItem = {
+  text: string;
+  code?: JSX.Element;
+  link: string;
+  icon?: boolean;
+};
 
 export interface IDropdown {
-  text: string;
-  items: {
-    text: string,
-    code?: JSX.Element,
-    link: string,
-    icon?: boolean,
-  }[],
-  overlayClassName?: string,
+  text?: string;
+  icon?: string;
+  items: MenuItem[];
+  overlayClassName?: string;
 }
+
+const getIcon = (icon: string) => {
+  switch (icon) {
+    case "apps":
+      return <Apps className={styles.icon} />;
+    default:
+      return <Apps className={styles.icon} />;
+  }
+};
 
 export const AppSelector: React.FC<IDropdown> = ({
   text,
+  icon,
   items,
-  overlayClassName = 'headerDropdown'
+  overlayClassName = "headerDropdown",
 }) => {
   // * state and handleChange function to allow us to apply styles to the 'Application' text
   const [visible, setVisible] = useState(false);
   const handleChange = (visible: boolean) => {
     setVisible(visible);
-  }
+  };
+
   const menu = (
     <Menu>
       {items.map((item, index) => (
         <Menu.Item key={index}>
-          {!!item.code ? item.code
-          : <a href={item.link} target="_blank">
-            {item.text}{!!item.icon && <NewTab className={styles.icon}/>}
-          </a>}
+          {!!item.code ? (
+            item.code
+          ) : (
+            <a href={item.link} target="_blank">
+              {item.text}
+              {!!item.icon && <NewTab className={styles.newTabIcon} />}
+            </a>
+          )}
         </Menu.Item>
-      ))} 
+      ))}
     </Menu>
   );
 
@@ -50,10 +67,25 @@ export const AppSelector: React.FC<IDropdown> = ({
       overlayClassName={overlayClassName}
     >
       <div className={styles[overlayClassName]}>
-        <div className={visible ? styles.hover : styles.normal}>
-          {text} <DownOutlined />
+        {/* <div className={visible ? styles.hover : styles.normal}> */}
+        <div
+          className={[
+            styles.dropdownButton,
+            visible ? styles.hover : styles.normal,
+          ].join(" ")}
+        >
+          {!!icon ? (
+            <>
+              {getIcon(icon)} <CaretDownOutlined />
+            </>
+          ) : (
+            <>
+              {text} <DownOutlined />
+            </>
+          )}
+          {/* {text} <DownOutlined /> */}
         </div>
       </div>
     </AntdDropdown>
-  )
-}
+  );
+};

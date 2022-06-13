@@ -1,8 +1,4 @@
-@import '@/style/theme.less';
-
-.buildDropdown {
-  .headerDropdown();
-}
+@import "@/style/theme.less";
 
 .hover {
   color: @info;
@@ -15,14 +11,25 @@
 }
 
 .headerDropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   height: 100%;
 }
 
-.buildDropdown {
-  .headerDropdown();
+.newTabIcon {
+  color: @gray-5;
+  margin-left: 8px;
 }
 
 .icon {
-  color: @gray-5;
-  margin-left: 8px;
+  height: 24px;
+  width: 24px;
+}
+
+.dropdownButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 6px;
 }
