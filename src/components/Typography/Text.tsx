@@ -3,21 +3,27 @@
 
 import * as React from 'react';
 import styles from './style.module.less';
+import { Typography } from 'antd';
+import { TextProps } from 'antd/lib/typography/Text';
+const TextAntd = Typography.Text;
 
-type Props = {
+type Props = TextProps & {
   type?: SqTextTypes;
   className?: string;
-} & React.HTMLProps<HTMLParagraphElement>;
+}
 
 export const Text: React.FC<Props> = ({ children, type = 'body', className, ...rest }) => {
   return (
-    <p {...rest} className={[styles.text, styles[type], className].join(' ')}>
+    <TextAntd
+      className={[styles.text, styles[type], className].join(' ')}
+      {...rest}
+    >
       {children}
-    </p>
+    </TextAntd>
   );
 };
 
-// Subquery Design System:
+// * Subquery Design System:
 type SqTextTypes = 'large'
   | 'largeSemiBold'
   | 'body'
