@@ -2,21 +2,22 @@
 // forked from github.com/subquery/react-ui
 
 import * as React from 'react';
-import styles from './style.module.less';
+import styles from './Text.module.less';
 import { Typography } from 'antd';
 import { TextProps } from 'antd/lib/typography/Text';
 const TextAntd = Typography.Text;
 
 type Props = TextProps & {
-  type?: SqTextTypes;
+  sqType?: SqTextTypes;
+  sqColor?: string;
   className?: string;
 }
 
-export const Text: React.FC<Props> = ({ children, type = 'body', className, ...rest }) => {
+export const Text: React.FC<Props> = ({ children, sqType = 'body', sqColor = 'gray-9', className, ...rest }) => {
   return (
     <TextAntd
-      className={[styles.text, styles[type], className].join(' ')}
       {...rest}
+      className={[styles.text, styles[sqType], styles[sqColor], className].join(' ')}
     >
       {children}
     </TextAntd>
