@@ -4,7 +4,7 @@ import './src/style.less'
 
 // * Just export our modified components and antd components imported and exported within component folders
 // this method means we don't have to delete the types file, but we have to manually add each component we want to use in the library... not great
-export * from './src/components'
+// export * from './src/components'
 
 // * export some components from antd and export them individually
 // import { Typography, Form } from 'antd'
@@ -36,4 +36,7 @@ export * from './src/components'
 // } from './src/components'
 
 // * and export the modules
-export * from './src/modules'
+// export * from './src/modules'
+
+// * export everything from src (components and modules)
+export * from './src'
