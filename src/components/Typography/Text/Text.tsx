@@ -9,7 +9,7 @@ const TextAntd = Typography.Text;
 
 type Props = TextProps & {
   sqType?: SqTextTypes;
-  sqColor?: string;
+  sqColor?: SqColors;
   className?: string;
 }
 
@@ -30,5 +30,32 @@ type SqTextTypes = 'large'
   | 'body'
   | 'bodyMedium'
   | 'medium'
-  | 'small' 
+  | 'small'
   | 'extraSmall'
+
+type SqColors = 'gray-9'
+  | 'gray-8'
+  | 'gray-7'
+  | 'gray-6'
+  | 'gray-5'
+  | 'gray-4'
+  | 'gray-3'
+  | 'gray-2'
+  | 'gray-1'
+  | 'primary-blue-1'
+  | 'primary-blue-2'
+  | 'primary-blue-3'
+  | 'primary-blue-4'
+  | 'primary-blue-5'
+  | 'primary-blue-6'
+  | 'primary-pink-1'
+  | 'primary-pink-2'
+  | 'primary-pink-3'
+  | 'primary-pink-4'
+  | 'primary-pink-5'
+  | 'primary-pink-6'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | 'info'
+
