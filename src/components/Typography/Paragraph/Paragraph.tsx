@@ -5,7 +5,7 @@ import * as React from 'react';
 import styles from './Paragraph.module.less';
 import { Typography } from 'antd';
 import { ParagraphProps } from 'antd/lib/typography/Paragraph';
-import { SqColors, SqTextTypes } from '../Text/Text';
+import { SqColors, SqTextTypes } from '@/style/types';
 const ParagraphAntd = Typography.Paragraph;
 
 type Props = ParagraphProps & {

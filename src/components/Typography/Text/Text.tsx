@@ -5,6 +5,7 @@ import * as React from 'react';
 import styles from './Text.module.less';
 import { Typography } from 'antd';
 import { TextProps } from 'antd/lib/typography/Text';
+import { SqColors, SqTextTypes } from '@/style/types';
 const TextAntd = Typography.Text;
 
 type Props = TextProps & {
@@ -23,39 +24,3 @@ export const Text: React.FC<Props> = ({ children, sqType = 'body', sqColor = 'gr
     </TextAntd>
   );
 };
-
-// * Subquery Design System:
-export type SqTextTypes = 'large'
-  | 'largeSemiBold'
-  | 'body'
-  | 'bodyMedium'
-  | 'medium'
-  | 'small'
-  | 'extraSmall'
-
-export type SqColors = 'gray-9'
-  | 'gray-8'
-  | 'gray-7'
-  | 'gray-6'
-  | 'gray-5'
-  | 'gray-4'
-  | 'gray-3'
-  | 'gray-2'
-  | 'gray-1'
-  | 'primary-blue-1'
-  | 'primary-blue-2'
-  | 'primary-blue-3'
-  | 'primary-blue-4'
-  | 'primary-blue-5'
-  | 'primary-blue-6'
-  | 'primary-pink-1'
-  | 'primary-pink-2'
-  | 'primary-pink-3'
-  | 'primary-pink-4'
-  | 'primary-pink-5'
-  | 'primary-pink-6'
-  | 'success'
-  | 'warning'
-  | 'error'
-  | 'info'
-
