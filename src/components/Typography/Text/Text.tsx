@@ -25,7 +25,7 @@ export const Text: React.FC<Props> = ({ children, sqType = 'body', sqColor = 'gr
 };
 
 // * Subquery Design System:
-type SqTextTypes = 'large'
+export type SqTextTypes = 'large'
   | 'largeSemiBold'
   | 'body'
   | 'bodyMedium'
@@ -33,7 +33,7 @@ type SqTextTypes = 'large'
   | 'small'
   | 'extraSmall'
 
-type SqColors = 'gray-9'
+export type SqColors = 'gray-9'
   | 'gray-8'
   | 'gray-7'
   | 'gray-6'

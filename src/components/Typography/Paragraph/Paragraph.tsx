@@ -2,14 +2,15 @@
 // forked from github.com/subquery/react-ui
 
 import * as React from 'react';
-import styles from './Text.module.less';
+import styles from './Paragraph.module.less';
 import { Typography } from 'antd';
 import { ParagraphProps } from 'antd/lib/typography/Paragraph';
+import { SqColors, SqTextTypes } from '../Text/Text';
 const ParagraphAntd = Typography.Paragraph;
 
 type Props = ParagraphProps & {
   sqType?: SqTextTypes;
-  sqColor?: string;
+  sqColor?: SqColors;
   className?: string;
 }
 
@@ -23,12 +24,3 @@ export const Paragraph: React.FC<Props> = ({ children, sqType = 'body', sqColor 
     </ParagraphAntd>
   );
 };
-
-// * Subquery Design System:
-type SqTextTypes = 'large'
-  | 'largeSemiBold'
-  | 'body'
-  | 'bodyMedium'
-  | 'medium'
-  | 'small' 
-  | 'extraSmall'
