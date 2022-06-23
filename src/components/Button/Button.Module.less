@@ -7,3 +7,19 @@
 //   // border: 1px solid var(--color-red);
 //   -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#00abeb), to(#fff), color-stop(0.5, #fff), color-stop(0.5, #66cc00)) 21 30 30 21 repeat repeat;
 // }
+
+.publish {
+  background: rgba(@primary-blue-1, 0.05) !important;
+  color: @gray-9  !important;
+  border: none !important;
+}
+
+.options {
+  .publish();
+
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+
+  line-height: 43px !important;
+}
