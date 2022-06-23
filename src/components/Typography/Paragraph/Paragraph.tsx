@@ -18,7 +18,7 @@ export const Paragraph: React.FC<Props> = ({ children, sqType = 'body', sqColor 
   return (
     <ParagraphAntd
       {...rest}
-      className={[styles.text, styles[sqType], styles[sqColor], className].join(' ')}
+      className={[styles.paragraph, styles.text, styles[sqType], styles[sqColor], className].join(' ')}
     >
       {children}
     </ParagraphAntd>
