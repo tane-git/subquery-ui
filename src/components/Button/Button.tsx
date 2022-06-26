@@ -11,12 +11,13 @@ export const Button: FC<SqButtonProps> = ({
   sqType = 'none',
   type = 'primary',
   shape = 'round',
+  className,
   ...rest
 }) => (
   <AntButton
     type={type}
     shape={shape}
-    className={styles[sqType]}
+    className={[styles[sqType], className].join(' ')}
     {...rest}
   />
 )
