@@ -7,6 +7,13 @@ export type SqTextTypes = 'large'
   | 'small'
   | 'extraSmall'
 
+export type SqTitleTypes = 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
+
 export type SqColors = 'gray-9'
   | 'gray-8'
   | 'gray-7'
