@@ -14,7 +14,7 @@ type Props = ParagraphProps & {
   className?: string;
 }
 
-export const Paragraph: React.FC<Props> = ({ children, sqType = 'body', sqColor = 'gray-9', className, ...rest }) => {
+export const Paragraph: React.FC<Props> = ({ children, sqType = 'body', sqColor = 'sq-gray-9', className, ...rest }) => {
   return (
     <ParagraphAntd
       {...rest}

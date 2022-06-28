@@ -7,7 +7,7 @@ export { Tag } from 'antd'
 //   sqBgColor?: SqBgColors;
 // }
 
-// export const Tag: React.FC<Props> = ({ children, sqBgColor = 'success', ...rest }) => {
+// export const Tag: React.FC<Props> = ({ children, sqBgColor = 'sq-success', ...rest }) => {
 //   return (
 //     <TagAntd
 //       {...rest}

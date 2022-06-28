@@ -14,7 +14,7 @@ type Props = TextProps & {
   className?: string;
 }
 
-export const Text: React.FC<Props> = ({ children, sqType = 'body', sqColor = 'gray-9', className, ...rest }) => {
+export const Text: React.FC<Props> = ({ children, sqType = 'body', sqColor = 'sq-gray-9', className, ...rest }) => {
   return (
     <TextAntd
       {...rest}

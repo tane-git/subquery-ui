@@ -11,7 +11,7 @@ type Props = TitleProps & {
   className?: string;
 }
 
-export const Title: React.FC<Props> = ({ children, sqTitle = '', sqColor = 'gray-9', className, ...rest }) => {
+export const Title: React.FC<Props> = ({ children, sqTitle = '', sqColor = 'sq-gray-9', className, ...rest }) => {
   return (
     <TitleAntd
       {...rest}
