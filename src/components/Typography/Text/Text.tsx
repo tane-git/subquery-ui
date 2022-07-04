@@ -5,7 +5,7 @@ import * as React from 'react';
 import styles from './Text.module.less';
 import { Typography } from 'antd';
 import { TextProps } from 'antd/lib/typography/Text';
-import { SqColors, SqTextTypes } from '@/style/types';
+import { SqColors, SqTextTypes } from '@/style/types/index';
 const TextAntd = Typography.Text;
 
 type Props = TextProps & {

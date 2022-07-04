@@ -2,7 +2,7 @@ import * as React from 'react';
 import styles from './Title.module.less';
 import { Typography } from 'antd';
 import { TitleProps } from 'antd/lib/typography/Title';
-import { SqColors, SqTitleTypes } from '@/style/types';
+import { SqColors, SqTitleTypes } from '@/style/types/index';
 const TitleAntd = Typography.Title;
 
 type Props = TitleProps & {
