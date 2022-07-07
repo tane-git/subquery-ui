@@ -1,19 +1,27 @@
-export { Tag } from 'antd'
-// import { SqBgColors, SqColors, SqTextTypes } from '@/style/types'
-// import { Tag as TagAntd, TagProps } from 'antd'
-// import styles from './Tag.module.less'
+// export { Tag } from 'antd'
 
-// type Props = TagProps & {
-//   sqBgColor?: SqBgColors;
-// }
+import { FC } from "react";
+import { Tag as TagAntd, TagType } from "antd";
+import style from './Tag.module.less';
 
-// export const Tag: React.FC<Props> = ({ children, sqBgColor = 'sq-success', ...rest }) => {
-//   return (
-//     <TagAntd
-//       {...rest}
-//       className={[styles.Tag, styles[sqBgColor]].join(' ')}
-//     >
-//       {children}
-//     </TagAntd>
-//   );
-// };
+export type SqTagType = 'success' |
+  'process' |
+  'error' |
+  'warning' |
+  'waiting'
+
+export interface TagProps extends TagType {
+  sqType?: SqTagType
+}
+
+export const Tag: FC<TagProps> = ({
+  sqType = 'success',
+  ...props
+}) => {
+  return (
+    <TagAntd
+      className={[style.sqTag, style[sqType]].join(' ')}
+      {...props}
+    />
+  )
+}
