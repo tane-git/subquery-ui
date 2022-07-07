@@ -2,10 +2,27 @@
 
 .sqTag {
   margin: 0px;
+  height: 22px;
 }
 
-.success {
-  background: rgba(@sq-sucess, 0.08);
-  border-color: rgba(@sq-sucess, 0.50);
-  color: @sq-sucess;
+.applySqTagStyle(@color) {
+  background: rgba(@color, 0.08);
+  border-color: rgba(@color, 0.50);
+  color: @color;
+}
+
+.sucess {
+  .applySqTagStyle(@sq-sucess);
+}
+.process {
+  .applySqTagStyle(@sq-info);
+}
+.error {
+  .applySqTagStyle(@sq-error);
+}
+.warning {
+  .applySqTagStyle(@sq-warning);
+}
+.waiting {
+  .applySqTagStyle(@sq-waiting);
 }
