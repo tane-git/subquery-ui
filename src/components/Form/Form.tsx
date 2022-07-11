@@ -1,7 +1,9 @@
-import { Form as AntForm } from 'antd';
+// import { Form as AntForm } from 'antd';
 
-const Form: typeof AntForm = AntForm
+// const Form: typeof AntForm = AntForm
 
-// ! cant export FormInterface from Antd, so using 'typeof' 
+// // ! cant export FormInterface from Antd, so using 'typeof' 
 
-export { Form }
+// export { Form }
+
+export { Form } from 'antd'
