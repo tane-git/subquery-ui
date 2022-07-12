@@ -4,7 +4,7 @@ import { FC } from "react";
 import { Tag as TagAntd, TagProps as TagAntdProps } from "antd";
 import style from './Tag.module.less';
 
-export type SqTagType = 'sucess' |
+export type SqTagType = 'success' |
   'process' |
   'error' |
   'warning' |
@@ -16,7 +16,7 @@ export interface TagProps extends TagAntdProps {
 }
 
 export const Tag: FC<TagProps> = ({
-  sqType = 'sucess',
+  sqType = 'success',
   children,
   ...props
 }) => {

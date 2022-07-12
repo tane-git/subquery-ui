@@ -24,7 +24,7 @@ export const themeColors = {
   'sq-gray-8': '#212B36',
   'sq-gray-9': '#1A202C',
 
-  'sq-sucess': '#65CD45',
+  'sq-success': '#65CD45',
   'sq-warning': '#F87C4F',
   'sq-error': '#F1585B',
   'sq-info': '#3AA0FF',
