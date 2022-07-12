@@ -1,3 +1,4 @@
+export * from './Alert/Alert'
 export * from "./Button/Button"
 export * from "./Col/Col"
 export * from "./Collapse/Collapse"
