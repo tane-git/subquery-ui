@@ -4,8 +4,12 @@ import styles from './Button.module.less';
 
 // const Button = (props: ButtonProps) => <AntButton {...props} />;
 interface SqButtonProps extends ButtonProps {
-  sqType?: string;
+  sqType?: SqButtonTypes;
 }
+
+type SqButtonTypes = 'publish'
+  | 'options'
+  | 'neutral'
 
 export const Button: FC<SqButtonProps> = ({
   sqType = 'none',
