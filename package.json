@@ -1,7 +1,7 @@
 {
-  "name": "@subql/ui-library",
+  "name": "subquery-ui-library",
   "description": "Subquery UI Components Library, founded on Antd and built with Vite",
-  "version": "0.0.49",
+  "version": "0.50.1",
   "license": "MIT",
   "main": "dist/index.es.js",
   "types": "dist/index.d.ts",
