@@ -2,6 +2,7 @@ export * from './Alert/Alert'
 export * from "./Button/Button"
 export * from "./Col/Col"
 export * from "./Collapse/Collapse"
+export * from './ConfigProvider/ConfigProvider'
 export * from "./Drawer/Drawer"
 export * from "./Dropdown/Dropdown"
 export * from "./Form/Form"
