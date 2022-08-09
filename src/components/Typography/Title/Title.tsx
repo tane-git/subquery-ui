@@ -16,7 +16,9 @@ export const Title: React.FC<Props> = ({ children, sqTitle = '', sqColor = 'sq-g
   return (
     <TitleAntd
       {...rest}
-      className={[styles.text, styles[sqTitle], styles[sqColor], className].join(' ')}
+      //! antd title does not support changing colors by default?
+      // className={[styles.text, styles[sqTitle], styles[sqColor], className].join(' ')}
+      className={className}
     >
       {children}
     </TitleAntd>

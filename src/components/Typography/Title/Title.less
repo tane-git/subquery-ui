@@ -7,7 +7,9 @@ h3,
 h4,
 h5,
 h6 {
-  color: @sq-gray-9;
+  //! doesnt work without important
+  // color: @sq-gray-9;
+  color: @sq-gray-9 !important;
 }
 
 h1,
@@ -31,6 +33,16 @@ h5,
 h6 {
   font-weight: 500;
 }
+
+//* FONT SIZE & LINE-HEIGHT
+@heading-1-size: 80px;
+@heading-2-size: 60px;
+@heading-3-size: 48px;
+@heading-4-size: 32px;
+@heading-5-size: 24px;
+
+//! I dont think the below works without !important,
+//! cant find a good way to customise each levels line-height
 
 h1 {
   font-size: 80px;
